@@ -276,7 +276,7 @@ module serializer
                     begin: tmds_driving
                         always_ff @(posedge clk_pixel_x5)
                         begin
-                            tmds[i] <= tmds_shift[i][0];
+                            // tmds[i] <= tmds_shift[i][0];
                             tmds_shift_negedge_temp[i] <= tmds_shift[i][1];
                         end
                         always_ff @(negedge clk_pixel_x5)
@@ -285,7 +285,7 @@ module serializer
                     logic tmds_clock_negedge_temp;
                     always_ff @(posedge clk_pixel_x5)
                     begin
-                        tmds_clock <= tmds_shift_clk_pixel[0];
+                        // tmds_clock <= tmds_shift_clk_pixel[0];
                         tmds_clock_negedge_temp <= tmds_shift_clk_pixel[1];
                     end
                     always_ff @(negedge clk_pixel_x5)
